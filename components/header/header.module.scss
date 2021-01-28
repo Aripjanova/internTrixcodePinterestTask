@@ -1,0 +1,212 @@
+.header {
+  background: white;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  margin-top: -100px;
+  align-items: center;
+  padding: 15px;
+  //justify-content:space-between;
+}
+
+
+
+.red {
+  color: red;
+}
+
+.i {
+  text-align: center;
+  color: #6a6868;
+}
+
+.header__menu {
+  display: flex;
+  height: 48px;
+  color: #333;
+  font-weight: 700;
+
+  &_item {
+    height: 48px;
+    //padding: 0 15px;
+    min-width: 60px;
+    padding: 7px 15px;
+    text-align: center;
+    border-radius: 24px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #ececec;
+    }
+
+    &_a {
+      border-radius: 24px;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      text-decoration: none;
+      align-items: center;
+    }
+  }
+}
+
+.logo {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: transparent;
+
+  &.logo:hover {
+    background-color: #ececec;
+  }
+}
+
+.search {
+  margin: 0 15px;
+  height: 48px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 880px;
+  align-items: center;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #ececec;
+  border: none;
+
+  &_icon {
+    fill: currentColor;
+    stroke-width: 0;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+
+    &_item {
+      color: black;
+    }
+  }
+
+  &__input {
+    border: none;
+    background-color: #ececec;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: normal;
+    height: 100%;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+.input[type="text"]::placeholder {
+  padding-left: 0px;
+}
+
+.notification {
+  margin-left: auto;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+
+  &:hover {
+    background-color: #ececec;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .header {
+    background: white;
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header {
+    background: white;
+    height: 100px;
+  }
+  .header__menu {
+    display: flex;
+    height: 60px;
+    color: #333;
+    font-weight: 700;
+
+    &_item {
+      height: 60px;
+      &_a {
+        font-size: 22px;
+
+      }
+    }
+  }
+  .search {
+    margin: 0 25px;
+    height: 60px;
+    &_icon {
+      fill: currentColor;
+      stroke-width: 0;
+      vertical-align: middle;
+      height: 16px;
+      width: 16px;
+      &_item {
+        color: black;
+      }
+    }
+
+    &__input {
+      border: none;
+      background-color: #ececec;
+      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: normal;
+      height: 100%;
+      outline: none;
+      padding: 20px;
+      width: 100%;
+    }
+  }
+
+  .input[type="text"]::placeholder {
+    padding-left: 0px;
+  }
+
+  .notification {
+    margin-left: auto;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+
+    &:hover {
+      background-color: #ececec;
+    }
+  }
+}

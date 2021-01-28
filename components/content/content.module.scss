@@ -1,0 +1,23 @@
+.content{
+  max-width: 860px;
+  width: 100%;
+  margin: 100px 260px 160px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    width: 1020px;
+    margin: 100px 40px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .content {
+    width: 650px;
+    margin: 100px 40px;
+    flex-direction: column;
+  }
+}
