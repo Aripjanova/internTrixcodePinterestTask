@@ -1,13 +1,16 @@
 {
-  "user": [
-    {
-      "name": "Aizada",
-      "surname": "Aripjanova",
-      "user_name": "Aika",
-      "url": " ",
-      "location": "",
-      "img": "https://i.pinimg.com/564x/2a/91/ca/2a91ca75ed9296ea93b23b189584b231.jpg"
-
-    }
-  ]
+  "user": {
+    "id": "1",
+    "userName": "Aizada",
+    "email": "aika35321@gmail.com",
+    "password": "1234"
+  },
+  "userinfo": {
+    "firstName": "vfd",
+    "lastName": "vd",
+    "userName": "vd",
+    "aboutYou": "vd",
+    "url": "vd",
+    "location": "fvd"
+  }
 }

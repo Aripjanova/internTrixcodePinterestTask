@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Main from '../../components/content/index'
 
-import SettingsTitle from './SettingsTitle'
+import SettingsTitle from '../../components/settings/SettingsTitle'
 import gStyle from '../../styles/settingsGlobal.module.scss'
 import style from '../../styles/accountSetting.module.scss'
 import classNames from "classnames";
