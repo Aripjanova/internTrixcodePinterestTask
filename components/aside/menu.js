@@ -9,7 +9,7 @@ export default function Menu(){
                 <nav className={style.menu}>
                     <ul className={style.menu__ul}>
                         <li className={style.menu__li}>
-                            <ActiveLink activeClassName={style.menu__li_active} href="/settings/changeProfile">
+                            <ActiveLink activeClassName={style.menu__li_active} href="/changeProfile">
                                 <a className={`${style.a}`}>
                                     <i className={`fas fa-pen ${style.i} `}/>
                                     Изменение профиля
@@ -18,7 +18,7 @@ export default function Menu(){
 
                         </li>
                         <li className={style.menu__li}>
-                            <ActiveLink activeClassName={style.menu__li_active} href="/settings/AccountSetting">
+                            <ActiveLink activeClassName={style.menu__li_active} href="/accountSetting">
                                 <a className={`${style.a}`}>
                                     <i className={`fas fa-user ${style.i} `}/>
                                     Настройки аккаунта

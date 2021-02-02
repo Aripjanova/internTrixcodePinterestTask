@@ -5,7 +5,9 @@ const initialState = {
 }
 const userSlice = createSlice({
     name: 'user',
-    initialState,
+    initialState:{
+        user: {}
+    },
     reducers: {
         userInfoLoad(state) {
             state.loading = true
@@ -14,6 +16,7 @@ const userSlice = createSlice({
             state.user = action.info
         },
         updateUserInfo(state, action) {
+            alert(action.payload)
             console.log(action)
             state.info = action.newInfo
         },

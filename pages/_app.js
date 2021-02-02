@@ -1,28 +1,43 @@
 import React from 'react'
 import App from 'next/app'
+import Head from 'next/head';
+import PropTypes from 'prop-types';
+import withReduxSaga from 'next-redux-saga'
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+// import theme from '../src/theme';
+
 
 import '../styles/globals.scss'
-import withReduxSaga from 'next-redux-saga'
-
 import wrapper from '../store/index'
 
-class ExampleApp extends App {
-  static async getInitialProps({Component, ctx}) {
-    let pageProps = {}
+function MyApp(props) {
+  const { Component, pageProps } = props;
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
     }
+  }, []);
 
-    return {pageProps}
-  }
-
-  render() {
-    const {Component, pageProps} = this.props
-    return (
-        <Component {...pageProps} />
-    )
-  }
+  return (
+      <React.Fragment>
+        <Head>
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        </Head>
+        <ThemeProvider >
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </React.Fragment>
+  );
 }
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
 
-export default wrapper.withRedux(withReduxSaga(ExampleApp))
+export default wrapper.withRedux(withReduxSaga(MyApp))

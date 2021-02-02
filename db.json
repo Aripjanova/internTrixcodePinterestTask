@@ -6,11 +6,10 @@
     "password": "1234"
   },
   "userinfo": {
-    "firstName": "vfd",
-    "lastName": "vd",
-    "userName": "vd",
-    "aboutYou": "vd",
-    "url": "vd",
-    "location": "fvd"
+    "url": "google.com",
+    "location": "Kyrgyzstan, Bishkek",
+    "firstName": "Aйзада",
+    "lastName": "Арипжанова",
+    "userName": "Aizada"
   }
 }

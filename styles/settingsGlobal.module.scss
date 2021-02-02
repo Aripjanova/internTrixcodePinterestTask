@@ -30,12 +30,16 @@
     border-color: #d6d6d6;
   }
 }
-
+.formError{
+  color: red;
+  font-size: 14px;
+  margin-top: 0px;
+}
 .input {
   font-size: 17px;
   width: 100%;
   min-height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: normal;
   //border-radius: calc(var(--g-boint)*4);
   //border-style: solid  ;
@@ -66,7 +70,7 @@
   cursor: pointer;
   text-align: left;
   font-weight: 400;
-  margin: 10px 0;
+  margin: 20px 0 10px 0;
   display: block;
 
   &_inline {

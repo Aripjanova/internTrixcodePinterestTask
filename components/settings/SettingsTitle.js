@@ -1,8 +1,11 @@
 import style from '../../styles/settingsTitle.module.scss'
 import classNames from "classnames";
+import titleStyle from "../../styles/settingsTitle.module.scss";
+import React from "react";
 
 
 function SettingsTitle(props) {
+    console.log(props.bg_color)
     return (
         <>
             <div className={style.settingTitle}>
@@ -15,9 +18,21 @@ function SettingsTitle(props) {
                     </p>
                 </div>
                 <div className={style.settingTitle__right}>
-                    <button className={classNames(style.button, {[style.button_color]: props.btn_color})}>Отмена</button>
-                    <button className={classNames(style.button, {[style.button_background]: props.btn_color})}>Готово</button>
+                    <button className={classNames(titleStyle.button, {[titleStyle.button_color]: props.bg_color})}
+                            onClick={()=>props.reset} disabled={props.submitting}
+                    >
+                        Отмена
+                    </button>
+                    <button
+                        type="submit"
+                        onClick={event => {
+                            // console.log(submit)
+                            // console.log(event)
 
+                            props.handleSubmit(event)
+                        }}
+                        className={classNames(titleStyle.button, {[titleStyle.button_background]: props.bg_color})}>Готово
+                    </button>
                 </div>
 
             </div>

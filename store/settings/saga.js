@@ -1,10 +1,6 @@
 import {put, takeLatest, takeEvery, call, all} from 'redux-saga/effects';
 
-
-// import {userInfoLoad, userInfo, updateUserInfo} from './slice'
-// import {USER_INFO_LOAD, UPDATE_SUCCESS, UPDATE_START, USER_INFO, UPDATE_ERROR} from '../actions/userActions'
 import {updateUserInfoFetch, getInfoApi} from '../../services/userService'
-
 
 export  function* getUserInfo() {
     const data = yield call(getInfoApi)
